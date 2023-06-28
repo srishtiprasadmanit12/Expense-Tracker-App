@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Heading ,HStack,VStack} from "@chakra-ui/react";
+import Form from "./components/Form";
+import { Budget } from "./components/Budget";
+import { Remaining } from "./components/Remaining";
+import ExpenseTotal from "./components/ExpenseTotal";
+import ExpenseList from "./components/ExpenseList";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container>
+      <VStack>
+      <Heading size='xl' mb={2}> Expense tracker</Heading>
+      
+      
+      <HStack>
+          <Budget/>
+          <Remaining/>
+          <ExpenseTotal/>
+      </HStack>
+         <ExpenseList/>
+         <Heading size='xl'>Add expenses</Heading>
+         <Form/>
+         </VStack>
+      </Container>
+      
+    </>
   );
 }
 
