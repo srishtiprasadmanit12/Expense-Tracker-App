@@ -16,11 +16,15 @@ import { Button,Input } from "@chakra-ui/react";
  
  const Form=()=>{
     return(
-      
         <div>
-            <Input type='text' name='item'placeholder='enter item' mb={2}/>
-            <Input type='number' name='cost'placeholder='Enter cost of item' mb={2} />
-            <center><Button mb={50}>ADD</Button></center>
+            <label>Name of the Item
+              <Input type='text' name='item'placeholder='enter item' mb={2} required='required'/>
+            </label>
+            <label>Cost of the item 
+              <Input type='number' name='cost'placeholder='Enter cost of item' mb={2} required='required' />
+            </label>
+            
+            <center><Button type='submit' mb={50} colorScheme='blue'>ADD</Button></center>
         </div>
     )}
   export default Form;
